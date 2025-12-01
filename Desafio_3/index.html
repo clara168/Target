@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3 - Calculadora de Juros</title>
+    <style>
+        
+        body { font-family: 'Segoe UI', sans-serif; 
+            background-color: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        } 
+
+        .card { background: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            width: 350px; 
+        }
+
+        h2 { color: #333; 
+            text-align: center; 
+            margin-bottom: 1.5rem; 
+        }
+
+        .input-group { margin-bottom: 1rem; }
+
+        label { display: block; 
+            margin-bottom: 0.5rem; 
+            color: #666; 
+            font-size: 0.9rem; 
+        }
+
+        input { width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-size: 1rem; 
+        }
+
+        button { width: 100%; 
+            padding: 12px; 
+            background-color: #007bff; 
+            color: white; border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            font-weight: bold; 
+            transition: 0.3s; 
+        }
+
+        button:hover { background-color: #0056b3; }
+
+        #resultado { margin-top: 1.5rem; 
+            padding: 1rem; 
+            border-radius: 6px; 
+            display: none; 
+        }
+
+        .atrasado { background-color: #ffebee; 
+            color: #c62828; 
+            border: 1px solid #ef9a9a; 
+        }
+
+        .em-dia { background-color: #e8f5e9; 
+            color: #2e7d32; 
+            border: 1px solid #a5d6a7; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Calcular Juros</h2>
+        
+        <div class="input-group">
+            <label for="valor">Valor do Boleto (R$)</label>
+            <input type="number" id="valor" placeholder="Ex: 100.00" step="0.01">
+        </div>
+
+        <div class="input-group">
+            <label for="dataVencimento">Data de Vencimento</label>
+            <input type="date" id="dataVencimento">
+        </div>
+
+        <button id="btnCalcular">Calcular</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
